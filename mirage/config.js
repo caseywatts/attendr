@@ -24,4 +24,6 @@ export default function() {
   */
   this.get('api/events/:id');
   this.get('api/events');
+  this.get('api/users/:id');
+  this.get('api/users');
 }

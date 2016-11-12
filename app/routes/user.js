@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model(params) {
     return Ember.RSVP.hash({
-      event: this.get('store').find('event', params.eventId)
+      user: this.get('store').find('user', params.userId)
     });
   }
 });
