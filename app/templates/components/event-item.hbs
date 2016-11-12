@@ -1,7 +1,9 @@
 {{yield}}
 
 <div class="event">
-  Name: {{event.name}}
+  Name: {{#link-to 'event' event.id}}
+    {{event.name}}
+    {{/link-to}}
   Location: {{event.location}}
   Time: {{event.name}}
 </div>
