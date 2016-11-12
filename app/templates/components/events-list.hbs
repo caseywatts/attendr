@@ -1,9 +1,5 @@
 {{yield}}
 
 {{#each events as |event|}}
-  <div class="event">
-    Name: {{event.name}}
-    Location: {{event.location}}
-    Time: {{event.name}}
-  </div>
+  {{event-item event=event}}
 {{/each}}
