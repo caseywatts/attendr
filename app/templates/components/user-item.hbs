@@ -1,7 +1,7 @@
 {{yield}}
 
-<div class="user">
-  Name: {{#link-to 'user' user.id}}
-    {{user.name}}
-    {{/link-to}}
-</div>
+{{#link-to 'user' user.id}}
+  <div class="user">
+    Name: {{user.name}}
+  </div>
+{{/link-to}}
