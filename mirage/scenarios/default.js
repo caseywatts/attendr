@@ -9,6 +9,12 @@ export default function(server) {
 
   // server.createList('post', 10);
   // server.loadFixtures();
-  server.createList('user', 3);
-  server.createList('event', 3);
+  let users = server.createList('user', 3);
+  let events = server.createList('event', 3);
+  users.forEach((user) => {
+    server.create('attendance-entry', {
+      'event': events[0],
+      user
+    });
+  });
 }
