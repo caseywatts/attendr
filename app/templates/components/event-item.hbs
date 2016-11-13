@@ -8,8 +8,15 @@
   </div>
 {{/link-to}}
 
-<h2> Attendance Entries </h2>
-{{#each event.attendanceEntries as |entry|}}
+<h2> Present Attendance Entries </h2>
+{{#each event.presentEntries as |entry|}}
+  {{#link-to 'user' entry.user.id}}
+    <div>{{entry.user.name}}</div>
+  {{/link-to}}
+{{/each}}
+
+<h2> Absent Attendance Entries </h2>
+{{#each event.absentEntries as |entry|}}
   {{#link-to 'user' entry.user.id}}
     <div>{{entry.user.name}}</div>
   {{/link-to}}
